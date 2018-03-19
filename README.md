@@ -27,7 +27,7 @@ If both commands return a version number, then the installations were successful
 Clone or download this repo from GitHub:
 
 ```
-git clone https://github.com/GraphicalHouse/gulptwigtachyons.git
+git clone https://github.com/j-greig/gulptwigtachyons.git
 ```
 
 Install dependencies in the local node_modules folder:
