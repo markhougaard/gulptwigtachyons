@@ -56,6 +56,7 @@ Now open the site and enable the LiveReload plugin in your browser.
 
 * [Tachyons](http://tachyons.io/) - CSS toolkit
 * [Gulp Twig](https://www.npmjs.com/package/gulp-twig) - Compile Twig.js templates with Gulp.
+* [LiveReload](http://livereload.com/) - because refreshing webpages manually is boring
 
 ## License
 

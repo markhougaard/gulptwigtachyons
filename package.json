@@ -1,7 +1,8 @@
 {
   "name": "gh-gulp-twig",
   "version": "1.0.0",
-  "description": "https://github.com/zimmen/gulp-twig",
+  "description": "Twig templating with Tachyons CSS and LiveReload, powered by Gulp.
+",
   "main": "gulpfile.js",
   "author": "@j-greig",
   "license": "MIT",
