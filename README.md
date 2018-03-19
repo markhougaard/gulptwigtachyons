@@ -44,6 +44,12 @@ Once installed, link the `web` folder (with [Valet](https://laravel.com/docs/5.5
 gulp
 ```
 
+Tip: if you have Valet installed, you can do everything with a single command:
+
+```
+cd web && valet link gulptwigtachyons && valet secure && valet open && gulp
+```
+
 Now open the site and enable the LiveReload plugin in your browser.
 
 ## Built With
