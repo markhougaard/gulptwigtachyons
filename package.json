@@ -1,0 +1,15 @@
+{
+  "name": "gh-gulp-twig",
+  "version": "1.0.0",
+  "description": "https://github.com/zimmen/gulp-twig",
+  "main": "gulpfile.js",
+  "author": "@j-greig",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-twig": "^1.2.0"
+  },
+  "devDependencies": {
+    "gulp-livereload": "^3.8.1",
+    "tachyons-generator": "^0.22.0"
+  }
+}
