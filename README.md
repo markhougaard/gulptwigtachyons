@@ -37,7 +37,7 @@ cd gulptwigtachyons
 npm install
 ```
 
-Once installed, link the `web` folder (with [Valet](https://laravel.com/docs/5.5/valet) or similar) and run the default Gulp command:
+Once installed, serve up the `web` folder locally (with [Valet](https://laravel.com/docs/5.5/valet) or similar) and run the default Gulp command:
 
 
 ```
