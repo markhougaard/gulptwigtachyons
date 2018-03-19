@@ -7,7 +7,7 @@ gulp.task('compile', function () {
     return gulp.src('./src/index.twig')
         .pipe(twig({
             data: {
-                title: 'Gulp and Twig',
+                title: 'Gulp and Twig and Tachyons',
                 benefits: [
                     'Fast',
                     'Flexible',
