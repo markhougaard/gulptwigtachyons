@@ -30,4 +30,6 @@ gulp.task('watch', function() {
   gulp.watch('./src/**/*.js', ['js']);
 });
 
+gulp.task('build', ['compile', 'js']);
+
 gulp.task('default', ['watch']);
