@@ -26,7 +26,7 @@ gulp.task('js', function () {
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch(['./src/*/.twig','./src/_data.json'], ['compile']);
+  gulp.watch(['./src/**/*.twig','./src/_data.json'], ['compile']);
   gulp.watch('./src/**/*.js', ['js']);
 });
 
