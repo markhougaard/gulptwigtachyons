@@ -1,7 +1,7 @@
 # Gulp Twig Tachyons
 
 Gulp and Twig templating with Tachyons CSS and LiveReload for good measure.
-Build with [Gulp Twig](https://github.com/zimmen/gulp-twig.)
+Build by [James Greig](https://www.greig.cc/) using [Gulp Twig](https://github.com/zimmen/gulp-twig.)
 
 ## Roadmap
 - Move JS to script.js and watch for changes
@@ -52,6 +52,15 @@ cd web && valet link gulptwigtachyons && valet secure && valet open && gulp
 ```
 
 Now open the site and enable the LiveReload plugin in your browser.
+
+## Editing the site
+
+**Important**
+Make sure you edit the .twig files in `/src`, not the .html files in `/web`!
+
+Once you have Gulp running, any changes made to the Twig templates will be autocompiled to HTML.
+
+Reusable elements like headers or footers should be store in the `_partials` folder, then included in the main Twig templates. (See the `<nav>` element in `_layout.twig` for an example).
 
 ## Built With
 

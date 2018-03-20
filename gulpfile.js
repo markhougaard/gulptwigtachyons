@@ -12,6 +12,7 @@ gulp.task('compile', function () {
                 benefits: [
                     'Fast',
                     'Flexible',
+                    'Fun',
                     'Free'
                 ],
                 clients: [
