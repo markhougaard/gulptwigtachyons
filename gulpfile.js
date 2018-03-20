@@ -24,12 +24,19 @@ gulp.task('js', function () {
     .pipe(livereload());
 })
 
+gulp.task('css', function () {
+  return gulp.src(['./src/css/*.css'])
+    .pipe(gulp.dest('./web/css'))
+    .pipe(livereload());
+})
+
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch(['./src/**/*.twig','./src/_data.json'], ['compile']);
   gulp.watch('./src/**/*.js', ['js']);
+  gulp.watch('./src/**/*.css', ['css']);
 });
 
-gulp.task('build', ['compile', 'js']);
+gulp.task('build', ['compile', 'js', 'css']);
 
 gulp.task('default', ['watch']);
