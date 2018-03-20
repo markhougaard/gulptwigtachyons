@@ -1,6 +1,7 @@
-# Gulp Twig Tachyons
+# Gulp/Twig/Tachyons
 
-Gulp and Twig templating with Tachyons CSS and LiveReload for good measure.  
+Gulp and Twig templating with Tachyons CSS and LiveReload for good measure. 
+(Or G/T/T for short).
 
 Built by [James Greig](https://www.greig.cc/) using [Gulp Twig](https://github.com/zimmen/gulp-twig.).
 
@@ -24,7 +25,7 @@ npm -v
 
 If both commands return a version number, then the installations were successful.
 
-### Installing
+### Installing G/T/T
 
 Clone or download this repo from GitHub:
 
@@ -39,7 +40,7 @@ cd gulptwigtachyons
 npm install
 ```
 
-Once installed, serve up the `web` folder locally (with [Valet](https://laravel.com/docs/5.5/valet) or similar) and run the default Gulp command from the project root:
+Once installed, serve up the `web` folder locally (with [Valet](https://laravel.com/docs/5.5/valet) or similar) and run the default Gulp command from your project root:
 
 
 ```
@@ -54,7 +55,7 @@ cd web && valet link gulptwigtachyons && valet secure && valet open && gulp
 
 Now open the site and enable the LiveReload plugin in your browser.
 
-## Editing the site
+## Editing your G/T/T site
 
 **Important**
 Make sure you edit the .twig files in `/src`, not the .html files in `/web`!
@@ -71,4 +72,4 @@ Reusable elements like headers or footers should be store in the `_partials` fol
 
 ## License
 
-This project is licensed under the MIT License.
+G/T/T is licensed under the MIT License.
