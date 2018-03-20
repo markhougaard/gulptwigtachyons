@@ -18,10 +18,17 @@ gulp.task('compile', function () {
       .pipe(livereload());
 });
 
+gulp.task('js', function () {
+  return gulp.src(['./src/js/*.js'])
+    .pipe(gulp.dest('./web/js'))
+    .pipe(livereload());
+})
+
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('./src/**/*.twig', ['compile']);
   gulp.watch('./src/_data.json', ['compile']);
+  gulp.watch('./src/**/*.js', ['js']);
 });
 
 gulp.task('default', ['watch']);
