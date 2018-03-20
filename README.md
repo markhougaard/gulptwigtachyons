@@ -1,7 +1,8 @@
 # Gulp Twig Tachyons
 
-Gulp and Twig templating with Tachyons CSS and LiveReload for good measure.
-Build by [James Greig](https://www.greig.cc/) using [Gulp Twig](https://github.com/zimmen/gulp-twig.)
+Gulp and Twig templating with Tachyons CSS and LiveReload for good measure.  
+
+Built by [James Greig](https://www.greig.cc/) using [Gulp Twig](https://github.com/zimmen/gulp-twig.)
 
 ## Roadmap
 - Move JS to script.js and watch for changes
