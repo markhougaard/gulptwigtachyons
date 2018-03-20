@@ -4,7 +4,7 @@ Gulp and Twig templating with Tachyons CSS and LiveReload for good measure.
 Build with [Gulp Twig](https://github.com/zimmen/gulp-twig.)
 
 ## Roadmap
-- Watch for JS changes
+- Move JS to script.js and watch for changes
 - Concat and minify if more than one CSS or JS file in /src
 - Switch to Tachyons Generator
 

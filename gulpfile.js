@@ -8,7 +8,7 @@ gulp.task('compile', function () {
         .pipe(twig({
             data: {
                 title: 'Gulp and Twig and Tachyons',
-                titleshort: 'GTT',
+                titleShort: 'GTT',
                 benefits: [
                     'Fast',
                     'Flexible',
