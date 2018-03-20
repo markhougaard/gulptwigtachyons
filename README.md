@@ -1,6 +1,7 @@
 # Gulp Twig Tachyons
 
-Gulp and Twig templating with Tachyons CSS for good measure.
+Gulp and Twig templating with Tachyons CSS and LiveReload for good measure.
+Build with [Gulp Twig](https://github.com/zimmen/gulp-twig.)
 
 ## Roadmap
 - Watch for JS changes
@@ -37,7 +38,7 @@ cd gulptwigtachyons
 npm install
 ```
 
-Once installed, serve up the `web` folder locally (with [Valet](https://laravel.com/docs/5.5/valet) or similar) and run the default Gulp command:
+Once installed, serve up the `web` folder locally (with [Valet](https://laravel.com/docs/5.5/valet) or similar) and run the default Gulp command from the project root:
 
 
 ```
@@ -54,8 +55,8 @@ Now open the site and enable the LiveReload plugin in your browser.
 
 ## Built With
 
-* [Tachyons](http://tachyons.io/) - CSS toolkit
 * [Gulp Twig](https://www.npmjs.com/package/gulp-twig) - Compile Twig.js templates with Gulp.
+* [Tachyons](http://tachyons.io/) - CSS toolkit
 * [LiveReload](http://livereload.com/) - because refreshing webpages manually is boring
 
 ## License
