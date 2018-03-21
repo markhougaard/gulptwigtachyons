@@ -3,6 +3,7 @@ var swig = require('gulp-swig');
 var data = require('gulp-data');
 var livereload = require('gulp-livereload');
 var twig = require('gulp-twig');
+var surge = require('gulp-surge')
 var fs = require('fs');
 
 gulp.task('compile', function () {
@@ -36,6 +37,13 @@ gulp.task('watch', function() {
   gulp.watch('./src/**/*.js', ['js']);
   gulp.watch('./src/**/*.css', ['css']);
 });
+
+gulp.task('deploy', [], function () {
+  return surge({
+    project: './web', //
+    domain: 'changeme.surge.sh'  // Your domain or Surge subdomain
+  })
+})
 
 gulp.task('build', ['compile', 'js', 'css']);
 

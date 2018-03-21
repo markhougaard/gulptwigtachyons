@@ -1,6 +1,6 @@
 # Gulp/Twig/Tachyons
 
-Gulp and Twig templating with Tachyons CSS and LiveReload for good measure. 
+Gulp and Twig templating with Tachyons CSS and LiveReload for good measure.
 (Or G/T/T for short).
 
 Built by [James Greig](https://www.greig.cc/) using [Gulp Twig](https://github.com/zimmen/gulp-twig.).
@@ -63,6 +63,11 @@ Make sure you edit the .twig files in `/src`, not the .html files in `/web`!
 Once you have Gulp running, any changes made to the Twig templates will be autocompiled to HTML.
 
 Reusable elements like headers or footers should be store in the `_partials` folder, then included in the main Twig templates. (See the `<nav>` element in `_layout.twig` for an example).
+
+## Quick deploy with Surge.sh
+
+Run `gulp deloy` to upload your site to a test url on https://surge.sh/
+Note: you should first set the `domain: 'changeme.surge.sh'` line in `gulpfile.js` to a subdomain of your choosing.
 
 ## Built With
 
