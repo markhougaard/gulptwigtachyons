@@ -53,6 +53,7 @@ gulp.task('deploy', [], function () {
     domain: 'changeme.surge.sh'  // Your domain or Surge subdomain
   })
 })
+
 gulp.task('build', ['compile', 'js', 'css']);
 
 gulp.task('default', ['watch']);
