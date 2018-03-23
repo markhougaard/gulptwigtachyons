@@ -7,9 +7,9 @@ Built by [James Greig](https://www.greig.cc/) using [Gulp Twig](https://github.c
 
 ## Roadmap
 - ~~Move JS to script.js and watch for changes~~
-- Watch for images in /img and move to /web/img
-- Allow subfolders in /web
-- Remove .html extension on index files in /web
+- Watch for images in /img and move to /web/img (warning: working but buggy)
+- ~~Allow subfolders in /web~~
+- ~~Remove .html extension on index files in /web~~
 - Concat and minify if more than one CSS or JS file in /src
 - Switch to Tachyons Generator
 
