@@ -5,9 +5,11 @@ var livereload = require('gulp-livereload');
 var twig = require('gulp-twig');
 var fs = require('fs');
 
+var distImg = './src/img/';
+
 gulp.task('compile', function () {
     'use strict';
-    return gulp.src(['./src/*.twig', '!./src/layout.twig'])
+    return gulp.src(['./src/**/*.twig', '!./src/layout.twig'])
       .pipe(data(function(file) {
         return JSON.parse(fs.readFileSync('./src/_data.json'));
       }))
@@ -30,13 +32,20 @@ gulp.task('css', function () {
     .pipe(livereload());
 })
 
+gulp.task('img', function () {
+  return gulp.src(['./src/img/**/*.jpg'])
+    .pipe(gulp.dest('./web/img'))
+    .pipe(livereload());
+})
+
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch(['./src/**/*.twig','./src/_data.json'], ['compile']);
   gulp.watch('./src/**/*.js', ['js']);
   gulp.watch('./src/**/*.css', ['css']);
+  gulp.watch('./src/img/**/*.jpg', ['img']);
 });
 
-gulp.task('build', ['compile', 'js', 'css']);
+gulp.task('build', ['compile', 'js', 'css', 'img']);
 
 gulp.task('default', ['watch']);
