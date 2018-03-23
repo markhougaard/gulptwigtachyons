@@ -1,11 +1,15 @@
-# Gulp Twig Tachyons
+# Gulp/Twig/Tachyons
 
-Gulp and Twig templating with Tachyons CSS and LiveReload for good measure.  
+Gulp and Twig templating with Tachyons CSS and LiveReload for good measure.
+(Or G/T/T for short).
 
 Built by [James Greig](https://www.greig.cc/) using [Gulp Twig](https://github.com/zimmen/gulp-twig.).
 
 ## Roadmap
 - ~~Move JS to script.js and watch for changes~~
+- Watch for images in /img and move to /web/img
+- Allow subfolders in /web
+- Remove .html extension on index files in /web
 - Concat and minify if more than one CSS or JS file in /src
 - Switch to Tachyons Generator
 
@@ -24,7 +28,7 @@ npm -v
 
 If both commands return a version number, then the installations were successful.
 
-### Installing
+### Installing G/T/T
 
 Clone or download this repo from GitHub:
 
@@ -39,7 +43,7 @@ cd gulptwigtachyons
 npm install
 ```
 
-Once installed, serve up the `web` folder locally (with [Valet](https://laravel.com/docs/5.5/valet) or similar) and run the default Gulp command from the project root:
+Once installed, serve up the `web` folder locally (with [Valet](https://laravel.com/docs/5.5/valet) or similar) and run the default Gulp command from your project root:
 
 
 ```
@@ -54,7 +58,7 @@ cd web && valet link gulptwigtachyons && valet secure && valet open && gulp
 
 Now open the site and enable the LiveReload plugin in your browser.
 
-## Editing the site
+## Editing your G/T/T site
 
 **Important**
 Make sure you edit the .twig files in `/src`, not the .html files in `/web`!
@@ -62,6 +66,11 @@ Make sure you edit the .twig files in `/src`, not the .html files in `/web`!
 Once you have Gulp running, any changes made to the Twig templates will be autocompiled to HTML.
 
 Reusable elements like headers or footers should be store in the `_partials` folder, then included in the main Twig templates. (See the `<nav>` element in `_layout.twig` for an example).
+
+## Quick deploy with Surge.sh
+
+Run `gulp deloy` to upload your site to a test url on https://surge.sh/
+Note: you should first set the `domain: 'changeme.surge.sh'` line in `gulpfile.js` to a subdomain of your choosing.
 
 ## Built With
 
@@ -71,4 +80,4 @@ Reusable elements like headers or footers should be store in the `_partials` fol
 
 ## License
 
-This project is licensed under the MIT License.
+G/T/T is licensed under the MIT License.
