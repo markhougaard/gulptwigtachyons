@@ -1,1 +1,4 @@
 /* Extra CSS goes here */
+a {
+   outline: 0 !important;
+}
