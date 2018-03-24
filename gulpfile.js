@@ -55,7 +55,7 @@ gulp.task('watch', function() {
 gulp.task('deploy', [], function () {
   return surge({
     project: './web', //
-    domain: 'gulptwigtachyons.surge.sh'  // Your domain or Surge subdomain
+    domain: 'gulptwigtachyons-barbajs.surge.sh'  // Your domain or Surge subdomain
   })
 })
 
