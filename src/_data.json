@@ -1,5 +1,6 @@
 {
-  "title": "Gulp and Twig and Tachyons",
+  "title": "Gulp and Twig and Tachyons and Marks",
+  "description": "A demo of how to use Gulp Twig Tachyons",
   "titleShort": "GTT",
   "benefits": [
     "Fast",
@@ -15,5 +16,34 @@
     "Pixar",
     "Nike",
     "James Greig"
+  ],
+  "users": [
+    {
+      "name":"John",
+      "age":30,
+      "cars": {
+        "car1":"Ford",
+        "car2":"BMW",
+        "car3":"Fiat"
+      }
+    },
+    {
+      "name":"Mark",
+      "age":32,
+      "cars": {
+        "car1":"Austin",
+        "car2":"Maserati",
+        "car3":"Volvo"
+      }
+    },
+    {
+      "name":"Tinna",
+      "age":35,
+      "cars": {
+        "car1":"Porsche",
+        "car2":"VW",
+        "car3":"Peugeot"
+      }
+    }
   ]
 }

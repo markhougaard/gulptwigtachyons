@@ -1,0 +1,13 @@
+{% extends '../layout.twig' %}
+
+{% block page %}
+  <h1>Users</h1>
+
+  {% for user in users %}
+    <article class="mb4">
+      <h2>{{ user.name }}, {{ user.age }}</h2>
+      <p class="measure lh-copy">The first car is {{ user.cars.car1 }}, second car is {{ user.cars.car2 }}, third car is {{ user.cars.car3 }}.</p>
+    </article>
+  {% endfor %}
+
+{% endblock %}
