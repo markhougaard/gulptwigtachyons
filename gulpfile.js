@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
-var swig = require('gulp-swig');
 var data = require('gulp-data');
 var twig = require('gulp-twig');
 var fs = require('fs');
