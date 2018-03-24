@@ -19,11 +19,14 @@
   },
   "devDependencies": {
     "barba.js": "^1.0.0",
+    "connect-livereload": "^0.6.0",
+    "del": "^3.0.0",
+    "express": "^4.16.3",
     "gulp-concat": "^2.6.1",
-    "gulp-livereload": "^3.8.1",
     "gulp-rename": "^1.2.2",
     "gulp-surge": "^0.1.0",
     "gulp-uglify": "^3.0.0",
-    "tachyons-generator": "^0.22.0"
+    "tachyons-generator": "^0.22.0",
+    "tiny-lr": "^1.1.1"
   }
 }
