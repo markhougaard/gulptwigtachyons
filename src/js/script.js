@@ -103,7 +103,6 @@ var CrazyAssTransition = Barba.BaseTransition.extend({
     $(this.oldContainer).hide();
 
     $el.css({
-      position : 'absolute',
       marginTop : '-500px',
       visibility : 'visible'
     });
