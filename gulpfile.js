@@ -1,11 +1,9 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
-var rename = require('gulp-rename');
 var swig = require('gulp-swig');
 var data = require('gulp-data');
 var twig = require('gulp-twig');
-var surge = require('gulp-surge')
 var fs = require('fs');
 var del = require('del');
 
@@ -73,20 +71,13 @@ gulp.task('img', function () {
     .pipe(gulp.dest('./web/img'))
 })
 
-gulp.task('watch', ['express', 'compile', 'js', 'css', 'img', 'livereload'], function(eb) {
+gulp.task('watch', ['express', 'livereload'], function(eb) {
   gulp.watch(['./src/**/*.twig','./src/_data.json'], ['compile']);
   gulp.watch('src/**/*.js', ['js']);
   gulp.watch('./src/**/*.css', ['css']);
   gulp.watch('src/img/**/*.jpg', ['img']);
   gulp.watch(BUILD_DIR + '/**', notifyLiveReload);
 });
-
-gulp.task('deploy', [], function () {
-  return surge({
-    project: './web', //
-    domain: 'gulptwigtachyons.surge.sh'  // Your domain or Surge subdomain
-  })
-})
 
 gulp.task('build', ['compile', 'js', 'css', 'img']);
 

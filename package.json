@@ -1,32 +1,26 @@
 {
   "name": "gulp-twig-tachyons",
-  "version": "1.0.1",
-  "description": "Twig templating with Tachyons CSS and LiveReload, powered by Gulp.",
+  "version": "2.0.0",
+  "description": "Twig templating with Tachyons CSS and LiveReload, powered by Gulp. Modfied by @marksdk.",
   "main": "gulpfile.js",
-  "author": "@j-greig",
+  "author": "@j-greig, @marksdk",
   "repository": {
     "type": "git",
-    "url": "https://github.com/j-greig/gulptwigtachyons.gi"
+    "url": "https://github.com/marksdk/gulptwigtachyons.git"
   },
   "license": "MIT",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-data": "^1.3.1",
-    "gulp-swig": "^0.8.0",
-    "gulp-twig": "^1.2.0",
-    "tar": "^2.2.1",
-    "uglify-js": "^3.3.16"
-  },
-  "devDependencies": {
-    "barba.js": "^1.0.0",
     "connect-livereload": "^0.6.0",
     "del": "^3.0.0",
     "express": "^4.16.3",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-surge": "^0.1.0",
+    "gulp-data": "^1.3.1",
+    "gulp-swig": "^0.8.0",
+    "gulp-twig": "^1.2.0",
     "gulp-uglify": "^3.0.0",
     "tachyons-generator": "^0.22.0",
-    "tiny-lr": "^1.1.1"
+    "tiny-lr": "^1.1.1",
+    "uglify-js": "^3.3.16"
   }
 }
