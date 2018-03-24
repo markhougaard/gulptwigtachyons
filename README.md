@@ -1,83 +1,53 @@
-# Gulp/Twig/Tachyons
+Based on [j-greig/gulptwigtachyons](https://github.com/j-greig/gulptwigtachyons).
 
-Gulp and Twig templating with Tachyons CSS and LiveReload for good measure.
-(Or G/T/T for short).
+---
 
-Built by [James Greig](https://www.greig.cc/) using [Gulp Twig](https://github.com/zimmen/gulp-twig.).
+This repo is basically just a ripped version of the same concept.
 
-## Roadmap
-- ~~Move JS to script.js and watch for changes~~
-- Watch for images in /img and move to /web/img (warning: working but buggy)
-- ~~Allow subfolders in /web~~
-- ~~Remove .html extension on index files in /web~~
-- Concat and minify if more than one CSS or JS file in /src
-- Switch to Tachyons Generator
+# What's happening?
 
-### Prerequisites
+Twig takes care of the templates, CSS is knocked out of the park with Tachyons, and there's a tiny Express server with LiveReload so it just updates without you having to hit refresh all the time. That's the stuff.
+
+## What do I need to make it work?
 
 - [Node and npm](https://nodejs.org/en/)
 - [Gulp](https://gulpjs.com/)
-- [LiveReload](http://livereload.com/extensions/)
 
-You can check that Node and npm are installed by running the following commands from the command line:
-
-```
-node -v
-npm -v
-```
-
-If both commands return a version number, then the installations were successful.
-
-### Installing G/T/T
-
-Clone or download this repo from GitHub:
+If you didn't already run into it, you'll figure out soon enough that Gulp needs to be installed globally. No, I don't know why either, but here's how:
 
 ```
-git clone https://github.com/j-greig/gulptwigtachyons.git
+npm install -g gulp
 ```
 
-Install dependencies in the local node_modules folder:
+## Now, how do I make it work?
+
+Clone this repo:
+
+```
+git clone https://github.com/marksdk/gulptwigtachyons.git
+```
+
+Install the dependencies:
 
 ```
 cd gulptwigtachyons
 npm install
 ```
 
-Once installed, serve up the `web` folder locally (with [Valet](https://laravel.com/docs/5.5/valet) or similar) and run the default Gulp command from your project root:
-
+Run the default Gulp command:
 
 ```
 gulp
 ```
 
-Tip: if you have Valet installed, you can do everything with a single command:
+Now open your browser of choice at `http://localhost:3000` and marvel at the wonder that is something that actually works on your computer.
 
-```
-cd web && valet link gulptwigtachyons && valet secure && valet open && gulp
-```
+## Now what?
 
-Now open the site and enable the LiveReload plugin in your browser.
+Make sure you edit the .twig files in `/src`, not the .html files in `/web`. If you do that, it will treat you well, and as long as you have Gulp running, all of your changes in the Twig templates will automatically be compiled to HTML. 🎩 Magic ✨
 
-## Editing your G/T/T site
-
-**Important**
-Make sure you edit the .twig files in `/src`, not the .html files in `/web`!
-
-Once you have Gulp running, any changes made to the Twig templates will be autocompiled to HTML.
-
-Reusable elements like headers or footers should be store in the `_partials` folder, then included in the main Twig templates. (See the `<nav>` element in `_layout.twig` for an example).
-
-## Quick deploy with Surge.sh
-
-Run `gulp deloy` to upload your site to a test url on https://surge.sh/
-Note: you should first set the `domain: 'changeme.surge.sh'` line in `gulpfile.js` to a subdomain of your choosing.
-
-## Built With
-
-* [Gulp Twig](https://www.npmjs.com/package/gulp-twig) - Compile Twig.js templates with Gulp.
-* [Tachyons](http://tachyons.io/) - CSS toolkit
-* [LiveReload](http://livereload.com/) - because refreshing webpages manually is boring
+Place reusable elements in the `_partials` folder, and include them in the other Twig templates. (See the `<nav>` element in `_layout.twig` for an example).
 
 ## License
 
-G/T/T is licensed under the MIT License.
+G/T/T is licensed under the MIT License, luckily.
