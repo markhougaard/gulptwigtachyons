@@ -7,10 +7,11 @@ Built by [James Greig](https://www.greig.cc/) using [Gulp Twig](https://github.c
 
 ## Roadmap
 - ~~Move JS to script.js and watch for changes~~
-- Watch for images in /img and move to /web/img (warning: working but buggy)
+- ~~Watch for images in /img and move to /web/img (warning: working but buggy)~~
 - ~~Allow subfolders in /web~~
 - ~~Remove .html extension on index files in /web~~
-- Concat and minify if more than one CSS or JS file in /src
+- Concat and minify if more than one CSS file ~~or JS file~~ in /src
+- Do the Barba.js transitions without jQuery (?)
 - Switch to Tachyons Generator
 
 ### Prerequisites
