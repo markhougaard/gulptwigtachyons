@@ -4,12 +4,45 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var swig = require('gulp-swig');
 var data = require('gulp-data');
-var livereload = require('gulp-livereload');
 var twig = require('gulp-twig');
 var surge = require('gulp-surge')
 var fs = require('fs');
+var del = require('del');
 
 var distImg = './src/img/';
+
+var express = require('express');
+var app = express();
+var tinylr = require('tiny-lr')();
+
+BUILD_DIR = 'web',
+EXPRESS_ROOT = BUILD_DIR;
+EXPRESS_PORT = 3000;
+LIVERELOAD_PORT = 35729;
+
+gulp.task('express', function() {
+  app.use(require('connect-livereload')({port: LIVERELOAD_PORT}));
+  app.use(express.static(EXPRESS_ROOT));
+  app.listen(EXPRESS_PORT, '0.0.0.0');
+});
+
+gulp.task('livereload', function() {
+  tinylr.listen(LIVERELOAD_PORT);
+});
+
+function notifyLiveReload(event) {
+  var fileName = require('path').relative(__dirname, event.path);
+
+  tinylr.changed({
+    body: {
+      files: [fileName]
+    }
+  });
+}
+
+gulp.task('clean', function(cb) {
+  del([BUILD_DIR], cb);
+});
 
 gulp.task('compile', function () {
     'use strict';
@@ -21,7 +54,6 @@ gulp.task('compile', function () {
             extname: '.html'
         }))
       .pipe(gulp.dest('./web'))
-      .pipe(livereload());
 });
 
 gulp.task('js', function () {
@@ -29,27 +61,24 @@ gulp.task('js', function () {
     .pipe(concat('script.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./web/js'))
-    .pipe(livereload());
 })
 
 gulp.task('css', function () {
   return gulp.src(['./src/css/*.css'])
     .pipe(gulp.dest('./web/css'))
-    .pipe(livereload());
 })
 
 gulp.task('img', function () {
   return gulp.src(['src/img/**/*.jpg'])
     .pipe(gulp.dest('./web/img'))
-    .pipe(livereload());
 })
 
-gulp.task('watch', function() {
-  livereload.listen();
+gulp.task('watch', ['express', 'compile', 'js', 'css', 'img', 'livereload'], function(eb) {
   gulp.watch(['./src/**/*.twig','./src/_data.json'], ['compile']);
   gulp.watch('src/**/*.js', ['js']);
   gulp.watch('./src/**/*.css', ['css']);
   gulp.watch('src/img/**/*.jpg', ['img']);
+  gulp.watch(BUILD_DIR + '/**', notifyLiveReload);
 });
 
 gulp.task('deploy', [], function () {
